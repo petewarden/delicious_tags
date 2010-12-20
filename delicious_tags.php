@@ -2,9 +2,6 @@
 
 function get_tags_for_url($url)
 {
-	global $blockedtags;
-	global $extratags;
-	
 	$hash = md5($url);
 	$infourl = 'http://feeds.delicious.com/v2/json/urlinfo/data?hash='.$hash;
 	$curlhandle = curl_init();
