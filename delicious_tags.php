@@ -13,8 +13,6 @@ function get_tags_for_url($url)
 	$inforesultjson = curl_exec($curlhandle);
 	$inforesult = json_decode($inforesultjson, true);
 
-error_log(print_r($inforesultjson, true));
-
 	if (!isset($inforesult[0]))
 		return array();
 
